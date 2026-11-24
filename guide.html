@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>사용법 · WatchSplit</title>
+<meta name="description" content="WatchSplit 사용법: 설치와 권한, 대회 형식 시뮬레이션, 구간 넘기기, 실내 거리 보정, 목표 페이서, 도전장, 기록 분석, 백업.">
+<meta name="theme-color" content="#0b0b0b">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="./">WATCHSPLIT</a>
+    <nav aria-label="주 메뉴">
+      <a href="guide.html" aria-current="page">사용법</a>
+      <a href="faq.html">자주 묻는 질문</a>
+    </nav>
+  </div>
+</header>
+<div class="stripe" aria-hidden="true"></div>
+
+<main class="guide">
+<div class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">HOW TO</p>
+    <h1>사용법</h1>
+    <ul class="toc">
+      <li><a href="#setup">설치와 권한</a></li>
+      <li><a href="#race">대회 시뮬레이션</a></li>
+      <li><a href="#switch">구간 넘기기</a></li>
+      <li><a href="#indoor">실내 거리 맞추기</a></li>
+      <li><a href="#pace">목표 페이서·진동</a></li>
+      <li><a href="#versus">대결·도전장</a></li>
+      <li><a href="#programs">내 프로그램·직접 입력</a></li>
+      <li><a href="#analysis">기록 분석</a></li>
+      <li><a href="#share">공유 카드</a></li>
+      <li><a href="#backup">백업·Strava·Health Connect</a></li>
+    </ul>
+  </div>
+</div>
+
+<section id="setup">
+  <div class="wrap">
+    <h2>설치와 권한</h2>
+    <ol>
+      <li>폰에 WatchSplit을 설치하고, 같은 Google 계정의 워치에도 설치해요. 폰 Play 스토어에서 워치에 설치할 수 있어요.</li>
+      <li>필요한 기기: 안드로이드 10 이상 폰, Wear OS 3 이상 워치. 실제 확인은 갤럭시워치7과 갤럭시 S25로 했어요.</li>
+      <li>처음 시작할 때 워치가 권한을 물어봐요.
+        <table>
+          <tr><th>권한</th><th>쓰는 곳</th></tr>
+          <tr><td>심박</td><td>구간별 평균·최고 심박, 심박 존</td></tr>
+          <tr><td>신체 활동</td><td>실내 러닝 거리(걸음 수 기반)</td></tr>
+          <tr><td>위치</td><td>야외를 처음 고를 때만 물어요. 야외 러닝 거리(GPS)에 운동 중에만 쓰고 경로는 저장하지 않아요</td></tr>
+          <tr><td>알림</td><td>운동 중 시계 화면의 운동 아이콘</td></tr>
+        </table>
+      </li>
+      <li>Health Connect 연결은 선택이에요. 폰 앱 설정에서 켜면 운동이 다른 건강 앱에도 보여요.</li>
+    </ol>
+  </div>
+</section>
+
+<section id="race">
+  <div class="wrap row">
+    <div>
+      <h2>대회 형식 시뮬레이션</h2>
+      <ol>
+        <li>워치에서 <strong>대회 시뮬레이션</strong>을 눌러요.</li>
+        <li>부문을 골라요: Open·Pro, 여자·남자, 혼성.</li>
+        <li><strong>싱글</strong>(혼자 전부) 또는 <strong>더블</strong>(러닝은 함께, 스테이션은 나눠서)을 골라요.</li>
+        <li>준비 화면에서 <strong>실내·야외</strong>와 대결 상대(없음, 내 최고, 최근 기록, 받은 도전장의 친구, 목표 페이서)를 고르고 <strong>시작</strong>.</li>
+      </ol>
+      <p class="tip">부문별 거리와 무게는 공개된 대회 규정을 바탕으로 넣었어요.</p>
+    </div>
+    <figure><div class="watch"><img src="img/watch-ready.png" alt="워치 준비 화면: 실내 야외 선택"></div></figure>
+  </div>
+</section>
+
+<section id="switch">
+  <div class="wrap row">
+    <div>
+      <h2>구간 넘기기</h2>
+      <ul>
+        <li>워치 <strong>아래 버튼을 한 번 누르면</strong> 다음 구간으로 넘어가요. 땀에 젖은 손가락으로도 확실히 눌려요.</li>
+        <li>화면을 <strong>길게 누르면</strong> 메뉴가 나와요: 계속하기, 일시정지, 구간 되돌리기, 운동 종료(한 번 더 누르면 종료).</li>
+        <li>예전처럼 화면을 길게 눌러 넘기고 싶으면 워치 설정 → 구간 전환에서 바꿀 수 있어요. 이때는 아래 버튼이 메뉴예요.</li>
+        <li><strong>진동이 오면 넘어간 거예요.</strong> 넘어가는 순간 방금 구간 시간과 다음 구간이 크게 보여요.</li>
+        <li>넘기고 3초 안에 다시 누른 건 실수로 보고 무시해요.</li>
+      </ul>
+    </div>
+    <figure><div class="watch"><img src="img/watch-flash.png" alt="워치 구간 전환 화면"></div></figure>
+  </div>
+</section>
+
+<section id="indoor">
+  <div class="wrap">
+    <h2>실내 러닝 거리 맞추기</h2>
+    <p>실내(러닝머신, 대회장)에서는 GPS 대신 걸음 수로 거리를 재요. 보폭은 사람마다 달라서 실제보다 짧거나 길게 나올 수 있어요.</p>
+    <ol>
+      <li>워치 설정 → <strong>📏 러닝머신 보정 달리기</strong>를 열고 거리(400m 또는 1000m)를 골라요.</li>
+      <li>러닝머신을 평소 페이스로 맞추고, 출발과 함께 <strong>시작</strong>.</li>
+      <li>러닝머신이 그 거리가 되는 순간 <strong>러닝머신 400m 도착</strong>을 누르고, <strong>이 값으로 저장</strong>.</li>
+    </ol>
+    <p class="tip warn">보정은 오차를 줄이는 방법이에요. 평소와 속도가 많이 다르면 다시 차이가 날 수 있어요. 대회 페이스로 보정하는 게 좋아요.</p>
+    <p>그래서 실내 러닝 중에는 정확한 <strong>구간 시간</strong>을 크게, 걸음으로 잰 페이스와 거리는 작게 "추정"으로 보여 줘요. 목표가 있으면 "목표까지 0:18"처럼 남은 시간을 알려 줘요. 구간이 끝나면 정해진 거리로 계산한 정확한 페이스가 나와요. 실내에서는 페이스가 빠르다·느리다는 진동도 울리지 않아요(걸음 거리로는 틀리게 울려서요).</p>
+    <p>실제 대회 기록은 폰의 기록에서 <strong>실전 대회 기록</strong>을 켜 두세요. 실전 표시가 붙고 예상 기록 계산에서 빠져요. 대회장 러닝 한 구간의 실제 거리를 알면 넣어 두세요. 그 거리로 구간 페이스를 다시 계산해요.</p>
+  </div>
+</section>
+
+<section id="pace">
+  <div class="wrap">
+    <h2>운동 중 진동과 목표 페이서</h2>
+    <p>러닝 중에는 목표(프로그램의 목표 기록이나 대결 상대)와 비교해 진동으로 알려 줘요. 준비 화면에서 <strong>🎯 목표 페이서</strong>(프로)를 고르면, 원하는 목표 기록으로 대결할 수 있어요.</p>
+    <table>
+      <tr><th>진동</th><th>뜻</th></tr>
+      <tr><td>짧게 4번</td><td>목표·상대보다 10초 이상 늦어요</td></tr>
+      <tr><td>길게 1번</td><td>목표·상대보다 10초 이상 빨라요</td></tr>
+      <tr><td>길게 2번</td><td>이번 러닝 구간의 거리에 닿았어요</td></tr>
+      <tr><td>짧게 3번</td><td>시간으로 정한 구간이 끝났어요</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="versus">
+  <div class="wrap">
+    <h2>나와 대결, 친구 도전장</h2>
+    <ul>
+      <li><strong>내 최고와 대결</strong>: 준비 화면에서 대결 상대로 고르면, 구간마다 내 최고 기록보다 앞서는지 뒤지는지 보여 줘요. 대회 시뮬레이션에서는 무료, 훈련·내 프로그램과 <strong>최근 기록과 대결</strong>은 프로예요.</li>
+      <li><strong>도전장 보내기</strong>: 폰의 기록 상세 → 오른쪽 위 <kbd>⋮</kbd> → <strong>도전장 보내기</strong>. 카카오톡 등으로 코드가 담긴 메시지를 보내요.</li>
+      <li><strong>도전장 받기</strong>: 받은 메시지를 길게 눌러 <strong>공유 → WatchSplit</strong>을 고르면 가장 정확해요. 복사해서 붙여 넣으면 코드가 잘릴 수 있어요.</li>
+      <li>받은 도전장은 워치로 넘어가서, 친구의 구간 기록과 대결할 수 있어요. 가입이나 서버가 필요 없어요.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="programs">
+  <div class="wrap">
+    <h2>내 프로그램, 직접 입력</h2>
+    <ul>
+      <li><strong>내 프로그램</strong>: 폰의 프로그램 탭에서 러닝·스테이션 구간을 만들어 워치로 보내요. 무료는 3개, 프로는 무제한이에요.</li>
+      <li><strong>직접 입력</strong>: 워치 없이 한 운동은 폰의 기록 탭 → <strong>+ 직접 입력</strong>. 시간은 숫자만 써도 돼요(312 → 3:12).</li>
+    </ul>
+  </div>
+</section>
+
+<section id="analysis">
+  <div class="wrap row">
+    <div>
+      <h2>기록 분석</h2>
+      <ul>
+        <li><strong>대회 예상 기록</strong>: 최근 러닝 페이스와 스테이션 기록으로 완주 시간을 추정해요. 실제 대회 기록을 보장하지는 않아요.</li>
+        <li><strong>스테이션 밸런스</strong>: 같은 완주 기록대의 평균과 비교한 스테이션별 강점과 약점.</li>
+        <li><strong>스테이션 후 러닝</strong>: 스테이션 바로 다음 러닝이 첫 러닝보다 얼마나 느려지는지.</li>
+        <li><strong>심박 존, 힘든 정도(RPE), 메모</strong>: 기록 상세에서 볼 수 있어요. 존별 시간은 프로예요.</li>
+        <li>무료 버전에서는 집중 훈련 구간과 스테이션 후 러닝을 1줄씩 보여 주고, 나머지는 프로에서 열려요.</li>
+      </ul>
+    </div>
+    <figure><img class="phone" src="img/phone-analysis.png" alt="폰 분석 화면(프로)"><figcaption style="color:var(--mute);font-size:14px;text-align:center;margin-top:8px">프로 화면</figcaption></figure>
+  </div>
+</section>
+
+<section id="share">
+  <div class="wrap">
+    <h2>결과 카드 공유</h2>
+    <p>기록 상세 → <strong>결과 카드 공유</strong>. 피드 4:5와 스토리 9:16 중 고르고, <strong>사진첩에 저장</strong>하거나 바로 <strong>공유하기</strong>.</p>
+  </div>
+</section>
+
+<section id="backup">
+  <div class="wrap">
+    <h2>백업, Strava, Health Connect</h2>
+    <ul>
+      <li><strong>백업·복원</strong>: 폰 설정에서 모든 기록(메모·RPE 포함), 내 프로그램, 받은 도전장, 대회 날짜, 달력에 넣은 다른 운동을 파일로 저장해요. 구글 드라이브에 저장해 두면 폰을 바꿔도 되살릴 수 있어요.</li>
+      <li><strong>Strava</strong>: 기록 상세 → <kbd>⋮</kbd> → <strong>Strava용 파일 (TCX)</strong>로 저장한 뒤 strava.com → 업로드에서 올리면 구간(랩)과 심박이 함께 들어가요.</li>
+      <li><strong>Health Connect</strong>: 연결해 두면 운동이 자동으로 저장돼요. 폰에서 기록을 지우면 Health Connect에서도 지워져요.</li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="links">
+      <a href="./">처음으로</a>
+      <a href="faq.html">자주 묻는 질문</a>
+      <a href="privacy.html">개인정보 처리방침</a>
+      <a href="terms.html">서비스 약관</a>
+      <a href="mailto:lungdary@gmail.com">문의 lungdary@gmail.com</a>
+    </div>
+    <p>WatchSplit은 HYROX와 제휴하거나 승인받지 않은 비공식 앱입니다. HYROX는 HYROX World GmbH의 상표입니다.</p>
+    <p>Galaxy Watch는 삼성전자의 상표이고, Wear OS는 Google LLC의 상표입니다.</p>
+  </div>
+</footer>
+
+</body>
+</html>

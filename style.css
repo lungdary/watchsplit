@@ -1,0 +1,188 @@
+/* WatchSplit site. Same palette as the apps (mobile Theme.kt / RaceDay.kt). Dark only, like the apps. */
+:root {
+  color-scheme: dark;
+  --track: #0b0b0b;
+  --surface: #15161a;
+  --surface-high: #1c1d22;
+  --line: #2a2b31;
+  --chalk: #f2f2ec;
+  --mute: #a9a9a2;
+  --volt: #e4ff3a;
+  --station: #ff5a1f;
+  --run: #4fc3f7;
+  --radius: 14px;
+  --max: 1080px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--track);
+  color: var(--chalk);
+  font: 16px/1.7 system-ui, -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+img { max-width: 100%; display: block; }
+a { color: var(--volt); }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--volt); outline-offset: 3px; }
+
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 16px; }
+
+/* Header */
+.top {
+  position: sticky; top: 0; z-index: 10;
+  background: rgba(11, 11, 11, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.top .wrap { display: flex; align-items: center; gap: 16px; min-height: 60px; flex-wrap: wrap; }
+.logo {
+  color: var(--volt); text-decoration: none; font-weight: 900;
+  letter-spacing: 0.28em; font-size: 15px; margin-right: auto;
+}
+.top nav { display: flex; gap: 4px; flex-wrap: wrap; }
+.top nav a {
+  color: var(--chalk); text-decoration: none; font-weight: 700; font-size: 15px;
+  padding: 8px 12px; border-radius: 8px;
+}
+.top nav a:hover, .top nav a[aria-current="page"] { background: var(--surface-high); color: var(--volt); }
+
+/* Hazard stripe, as on the watch home */
+.stripe {
+  height: 10px;
+  background: repeating-linear-gradient(-45deg, var(--volt) 0 14px, transparent 14px 26px);
+}
+
+/* Hero */
+.hero { padding: 56px 0 40px; }
+.hero .wrap { display: grid; gap: 40px; grid-template-columns: 1.1fr 1fr; align-items: center; }
+.eyebrow { color: var(--volt); font-weight: 900; letter-spacing: 0.24em; font-size: 13px; margin: 0 0 12px; }
+h1 { font-size: clamp(32px, 6vw, 54px); line-height: 1.18; margin: 0 0 18px; font-weight: 900; }
+h1 em { font-style: italic; color: var(--volt); }
+.lead { color: var(--mute); font-size: 18px; margin: 0 0 28px; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.btn {
+  display: inline-block; text-decoration: none; font-weight: 900; font-size: 16px;
+  padding: 14px 26px; border-radius: 4px; transform: skewX(-9deg);
+}
+.btn > span { display: inline-block; transform: skewX(9deg); }
+.btn-volt { background: var(--volt); color: #000; }
+.btn-ghost { border: 2px solid var(--line); color: var(--chalk); }
+.btn-ghost:hover { border-color: var(--volt); }
+.soon { color: var(--mute); font-size: 14px; }
+
+.devices { position: relative; display: flex; justify-content: center; align-items: flex-end; min-height: 420px; }
+.phone {
+  width: min(250px, 62%); border-radius: 26px; border: 6px solid #222329;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6); background: #000;
+}
+.watch {
+  width: min(210px, 52%); aspect-ratio: 1; border-radius: 50%; overflow: hidden;
+  border: 10px solid #1a1b1f; box-shadow: 0 0 0 2px #33343a, 0 20px 50px rgba(0, 0, 0, 0.7); background: #000;
+}
+.watch img { width: 100%; height: 100%; object-fit: cover; }
+.devices .watch { position: absolute; left: 0; bottom: 18px; }
+.devices .phone { margin-left: 30%; }
+
+/* Sections */
+section { padding: 56px 0; scroll-margin-top: 64px; }
+section + section { border-top: 1px solid var(--line); }
+h2 { font-size: clamp(26px, 4vw, 36px); line-height: 1.25; margin: 0 0 10px; font-weight: 900; }
+.sub { color: var(--mute); margin: 0 0 32px; font-size: 17px; }
+h3 { font-size: 19px; margin: 0 0 6px; }
+
+.grid { display: grid; gap: 16px; grid-template-columns: repeat(3, 1fr); }
+.card {
+  background: var(--surface); border-radius: var(--radius); padding: 22px;
+  border-left: 5px solid var(--volt);
+}
+.card.station { border-left-color: var(--station); }
+.card.run { border-left-color: var(--run); }
+.card p { margin: 0; color: var(--mute); }
+.card .tag { color: var(--volt); font-weight: 900; font-style: italic; font-size: 26px; line-height: 1; margin-bottom: 10px; display: block; }
+
+.audience {
+  font-size: clamp(20px, 3vw, 26px); font-weight: 800; line-height: 1.5; margin: 0;
+  border-left: 6px solid var(--station); padding-left: 18px;
+}
+
+/* Steps */
+.steps { display: grid; gap: 16px; grid-template-columns: repeat(3, 1fr); counter-reset: step; }
+.step { background: var(--surface); border-radius: var(--radius); padding: 22px; }
+.step::before {
+  counter-increment: step; content: "0" counter(step);
+  display: block; color: var(--volt); font-weight: 900; font-style: italic; font-size: 40px; line-height: 1; margin-bottom: 12px;
+}
+.step p { margin: 0; color: var(--mute); }
+
+/* Gallery of screens */
+.screens { display: grid; gap: 24px; grid-template-columns: repeat(4, 1fr); align-items: start; }
+.screens figure { margin: 0; }
+.screens figcaption { color: var(--mute); font-size: 14px; margin-top: 10px; text-align: center; }
+.screens .watch { width: 100%; margin: 0 auto; }
+.screens .phone { width: 100%; margin: 0; }
+
+/* Watch / phone split */
+.split { display: grid; gap: 16px; grid-template-columns: 1fr 1fr; }
+.split .card ul { margin: 10px 0 0; padding-left: 20px; color: var(--mute); }
+
+/* Privacy band */
+.band { background: var(--volt); color: #000; border-radius: var(--radius); padding: 32px; }
+.band h2 { color: #000; }
+.band ul { margin: 0; padding-left: 20px; font-weight: 700; display: grid; gap: 6px; grid-template-columns: repeat(2, 1fr); }
+
+/* Pricing */
+.plans { display: grid; gap: 16px; grid-template-columns: 1fr 1fr; }
+.plan { background: var(--surface); border-radius: var(--radius); padding: 26px; }
+.plan.pro { outline: 2px solid var(--volt); }
+.plan h3 { font-size: 22px; }
+.price { font-size: 28px; font-weight: 900; font-style: italic; margin: 4px 0 14px; }
+.plan ul { margin: 0; padding-left: 20px; color: var(--chalk); display: grid; gap: 4px; }
+.plan .note { color: var(--mute); font-size: 14px; margin: 14px 0 0; }
+
+/* FAQ */
+details { background: var(--surface); border-radius: var(--radius); padding: 16px 20px; margin-bottom: 10px; }
+summary { cursor: pointer; font-weight: 800; font-size: 17px; }
+details p, details ul { color: var(--mute); margin: 10px 0 0; }
+details ul { padding-left: 20px; }
+
+/* Guide */
+.page-head { padding: 48px 0 24px; }
+.toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.toc a {
+  display: inline-block; background: var(--surface); color: var(--chalk); text-decoration: none;
+  padding: 8px 14px; border-radius: 999px; font-size: 14px; font-weight: 700;
+}
+.toc a:hover { color: var(--volt); }
+.guide section { padding: 40px 0; }
+.guide .row { display: grid; gap: 32px; grid-template-columns: 1fr 220px; align-items: start; }
+.guide ol, .guide ul { padding-left: 22px; }
+.guide li { margin-bottom: 6px; }
+.tip { background: var(--surface-high); border-left: 4px solid var(--run); padding: 12px 16px; border-radius: 8px; color: var(--chalk); margin: 14px 0 0; }
+.warn { border-left-color: var(--station); }
+kbd { background: var(--surface-high); border: 1px solid var(--line); border-radius: 6px; padding: 1px 7px; font: inherit; font-size: 14px; }
+table { border-collapse: collapse; width: 100%; margin: 10px 0 0; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { color: var(--mute); font-weight: 700; font-size: 14px; }
+
+/* Footer */
+footer { border-top: 1px solid var(--line); padding: 32px 0 48px; color: var(--mute); font-size: 14px; }
+footer .links { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 14px; }
+footer p { margin: 6px 0; }
+
+@media (max-width: 860px) {
+  .hero .wrap, .guide .row { grid-template-columns: 1fr; }
+  .grid, .steps { grid-template-columns: 1fr 1fr; }
+  .screens { grid-template-columns: 1fr 1fr; }
+  .guide .row figure { max-width: 220px; }
+}
+@media (max-width: 560px) {
+  .grid, .steps, .split, .plans { grid-template-columns: 1fr; }
+  .band ul { grid-template-columns: 1fr; }
+  .band { padding: 24px 20px; }
+  .hero { padding-top: 36px; }
+  .devices { min-height: 360px; }
+}
